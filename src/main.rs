@@ -1,9 +1,10 @@
 #[macro_use]
 extern crate rocket;
+mod train;
 
 #[get("/")]
 fn index() -> &'static str {
-    "Hello, world!"
+    train::train()
 }
 
 #[launch]
